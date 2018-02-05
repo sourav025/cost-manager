@@ -28,17 +28,39 @@
 	<build>
 		<plugins>
 			<plugin>
-			  <groupId>org.codehaus.mojo</groupId>
-			  <artifactId>exec-maven-plugin</artifactId>
-			  <version>1.1</version>
-			  <executions><execution>
-			    <goals><goal>java</goal></goals>
-			  </execution></executions>
-			  <configuration>
-			    <mainClass>com.mavericks.costmanager.costmanager.App</mainClass>
-			  </configuration>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.movericks.costmanager.CostManager</mainClass>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.movericks.costmanager.CostManager</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+	     <resource>
+	       <directory>src/main/resources</directory>
+	     </resource>
+	   </resources>
 	</build>
 
 </project>

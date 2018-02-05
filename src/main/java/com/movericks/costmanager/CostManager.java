@@ -1,6 +1,7 @@
 package com.movericks.costmanager;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
@@ -17,9 +18,12 @@ import com.movericks.costmanager.services.impl.CostManagerServiceImpl;
  */
 
 public class CostManager {
-
-	/**
-	 * Service Intialization is completed here. 
+	
+	private static final String NAMES_FILE="names";
+	private static final String EXPENSES_FILE="expenses";
+	
+	/** 
+	 * Service Intialization is completed here.
 	 */
 	private final CostManagerService costManagerService;
 	{
@@ -27,13 +31,14 @@ public class CostManager {
 	}
 
 	public static void main(String[] args) throws IOException {
+
 		CostManager costManager = new CostManager();
+		
 		// Input Names List From File
-		File namesFile = new File(
-				"/Users/sourav/Desktop/input/custom/names.txt");
+		File namesFile = costManager.getFileFromSystem(NAMES_FILE);
+
 		// Input Expense Transactions List from File
-		File expensesListsFile = new File(
-				"/Users/sourav/Desktop/input/custom/payments.txt");
+		File expensesListsFile = costManager.getFileFromSystem(EXPENSES_FILE);
 
 		// Add all users First
 		costManager.addUsers(namesFile);
@@ -45,8 +50,18 @@ public class CostManager {
 		costManager.getSettlementStatus().stream().forEach(System.out::println);
 	}
 
+	private File getFileFromSystem(String parameterName) throws FileNotFoundException {
+		String path=System.getProperty(parameterName);
+		
+		File file = new File(path);
+		if(!file.exists()) 
+			throw new FileNotFoundException(String.format("File not found %s", path));
+		return file;
+	}
+
 	/**
 	 * Add Users from file
+	 * 
 	 * @param file
 	 * @return
 	 * @throws IOException
@@ -57,7 +72,8 @@ public class CostManager {
 		if (userAddResultEntity.getFailed() != 0) {
 			System.err.printf("[WARNING] Failed to Register %d Users\n",
 					userAddResultEntity.getFailed());
-			userAddResultEntity.getFailedLists().stream().map(failed->"[Skipped] "+failed)
+			userAddResultEntity.getFailedLists().stream()
+					.map(failed -> "[Skipped] " + failed)
 					.forEach(System.err::println);
 		}
 		return userAddResultEntity;
@@ -65,6 +81,7 @@ public class CostManager {
 
 	/**
 	 * Add All expenses from file
+	 * 
 	 * @param file
 	 * @return
 	 * @throws IOException
@@ -84,6 +101,7 @@ public class CostManager {
 
 	/**
 	 * Return All settlement Status
+	 * 
 	 * @return
 	 */
 	public List<Settlement> getSettlementStatus() {
