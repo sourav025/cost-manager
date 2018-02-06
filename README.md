@@ -8,7 +8,6 @@ $PEOPLE_NAME$ paid $AMOUNT_WITH_CURRENCY_SIGN_AS_PREFIX$ for $PURPOSE_DESCRIPTIO
 3. <b>No Negative amount</b> of money is not allowed
 4. <b>CURRENCY SIGN</b> is always <b>$</b>
 
-
 ## Instructions to Run `cost-manager`
 ### Pre-requisitions
 ```code
@@ -20,21 +19,20 @@ $PEOPLE_NAME$ paid $AMOUNT_WITH_CURRENCY_SIGN_AS_PREFIX$ for $PURPOSE_DESCRIPTIO
 
 ### Procedures to follow
 1. Open terminal or Portable Git
-2. Clone from Github repo using  
+2. Clone from Github repo using following command
 ```
 git clone https://github.com/sourav025/cost-manager.git
 ```
- command
 3. Go inside `cost-manager` directory
 4. Execute `mvn clean install` command
-5.  
-  * Execute command. Please use absolute path for file.
-  ```
-  mvn -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$" exec:java
-  ```
-  * Or Goto `target` directory using `cd target` and execute 
-  ```
-  java -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$ -jar cost-manager-1.0.0-SNAPSHOT.jar
-  ``` 
+5. Now there are 2 ways, application main function can be executed
+    1. Execute command. Please use absolute path for file.
+    ```
+    mvn -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$" exec:java
+    ```
+    2. Goto `target` directory using `cd target` and execute 
+    ```
+    java -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$ -jar cost-manager-1.0.0-SNAPSHOT.jar
+    ``` 
 
 6. To execute unit tests goto `cost-manager` directory and execute `mvn surefire:test`
