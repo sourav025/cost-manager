@@ -1,5 +1,7 @@
 package com.movericks.costmanager.services.impl;
 
+import java.util.regex.Pattern;
+
 import com.movericks.costmanager.entities.ExpenseEntity;
 import com.movericks.costmanager.services.UserService;
 import com.movericks.costmanager.services.ValidationService;
@@ -15,7 +17,7 @@ public class ValidationServiceImpl implements ValidationService {
 
 	@Override
 	public boolean validateName(String name) {
-		if (name == null || name.isEmpty()) {
+		if (name == null || name.isEmpty() || !Pattern.matches("^[\\p{L}\\s'.-]+$", name)) {
 			throw new RuntimeException(
 					"Transaction contains invalid user name.");
 		}

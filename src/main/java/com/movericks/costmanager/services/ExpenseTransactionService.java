@@ -13,7 +13,7 @@ public interface ExpenseTransactionService {
 	 * method returns the headCost added for All Users
 	 * 
 	 * @param expenseEntity
-	 * @return
+	 * @return double
 	 */
 	public double addExpenseTransaction(ExpenseEntity expenseEntity);
 
@@ -28,7 +28,7 @@ public interface ExpenseTransactionService {
 	 * Parse line of Type String to ExpenseEntity
 	 * 
 	 * @param line
-	 * @return
+	 * @return ExpenseEntity
 	 */
 	public ExpenseEntity parse(String line);
 }

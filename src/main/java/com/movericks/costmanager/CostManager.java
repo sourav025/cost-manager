@@ -63,7 +63,7 @@ public class CostManager {
 	 * Add Users from file
 	 * 
 	 * @param file
-	 * @return
+	 * @return UserAddResultEntity
 	 * @throws IOException
 	 */
 	public UserAddResultEntity addUsers(File file) throws IOException {
@@ -83,7 +83,7 @@ public class CostManager {
 	 * Add All expenses from file
 	 * 
 	 * @param file
-	 * @return
+	 * @return ExpenseAddResultEntity
 	 * @throws IOException
 	 */
 	public ExpenseAddResultEntity addExpenses(File file) throws IOException {
@@ -102,7 +102,7 @@ public class CostManager {
 	/**
 	 * Return All settlement Status
 	 * 
-	 * @return
+	 * @return List<Settlement>
 	 */
 	public List<Settlement> getSettlementStatus() {
 		return costManagerService.getCurrentSettlementStatus();

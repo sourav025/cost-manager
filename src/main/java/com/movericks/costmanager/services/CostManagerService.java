@@ -21,7 +21,7 @@ public interface CostManagerService {
 	 * Register a new User
 	 * 
 	 * @param user
-	 * @return
+	 * @return boolean
 	 */
 	public boolean addUser(String name);
 	
@@ -39,7 +39,7 @@ public interface CostManagerService {
 	 * the headCost added for All Users
 	 * 
 	 * @param expenseEntity
-	 * @return
+	 * @return double
 	 */
 	public double addExpenseTransaction(ExpenseEntity expenseEntity);
 
@@ -48,7 +48,7 @@ public interface CostManagerService {
 	 * ExpenseString from file
 	 * 
 	 * @param expenseString
-	 * @return
+	 * @return double
 	 */
 	public double addExpenseTransaction(String expenseString);
 
