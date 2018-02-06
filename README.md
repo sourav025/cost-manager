@@ -1,26 +1,40 @@
-=== Assumptions - for `Cost-Manager` ===
-A1. Given names in input people file are unique and each names are separated by end of line.
-Otherwise, names will be skipped the name to register into system.
-A2. Expense Transaction files contain lines and each line represents a separate expense transaction made by any one of the people involved. Expense Transaction is valid iff name provided is registered before, amount is not negative.
-Each transaction line in file always follows the below format: 
-	$PEOPLE_NAME$ paid $AMOUNT_WITH_CURRENCY_SIGN_AS_PREFIX$ for $PURPOSE_DESCRIPTION$.
-A3. `No Negative amount` of money is not allowed
-A4. `CURRENCY SIGN` is always `$`
+## Assumptions for `cost-manager`
+1. Names will be separated by lines in input name list file. All names are unique. Duplicate names in the files will be <b>skipped</b>.
+2. Each line in expense transaction file represents a separate transaction made by any one of the people involved. Expense Transaction is valid <b>iff</b> name provided is presented in the namelist file. Each transaction line in file always follows the below format: 
+```
+$PEOPLE_NAME$ paid $AMOUNT_WITH_CURRENCY_SIGN_AS_PREFIX$ for $PURPOSE_DESCRIPTION$.
+```
+
+3. <b>No Negative amount</b> of money is not allowed
+4. <b>CURRENCY SIGN</b> is always <b>$</b>
 
 
-=== Instructions to Run Project  ===
-Pre-requisitions to start a local development environment for cost-manager.
-# Java-8
-# Maven
-# Git
-# Internet Connection ( To down artifacts from Maven repository)
+## Instructions to Run `cost-manager`
+### Pre-requisitions
+```code
+1. Java-8
+2. Maven
+3. Git
+4. Internet Connection ( To down artifacts from Maven repository)
+```
 
-==== Procedures to follow ====
-# Open terminal or Portable Git
-# Clone from Github repo using `git clone https://github.com/sourav025/cost-manager.git` command
-# Go inside `cost-manager` directory
-# Execute `mvn clean install` command
-# Execute `mvn -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$" exec:java` and please use absolute path for file
-  Or Goto `target` directory using `cd target` and execute `java -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$ -jar cost-manager-1.0.0-SNAPSHOT.jar` 
-  Note: Please make sure to put
-# To execute unit tests goto `cost-manager` directory and execute `mvn surefire:test`
+### Procedures to follow
+1. Open terminal or Portable Git
+2. Clone from Github repo using  
+```
+git clone https://github.com/sourav025/cost-manager.git
+```
+ command
+3. Go inside `cost-manager` directory
+4. Execute `mvn clean install` command
+5.  
+  * Execute command. Please use absolute path for file.
+  ```
+  mvn -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$" exec:java
+  ```
+  * Or Goto `target` directory using `cd target` and execute 
+  ```
+  java -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$ -jar cost-manager-1.0.0-SNAPSHOT.jar
+  ``` 
+
+6. To execute unit tests goto `cost-manager` directory and execute `mvn surefire:test`
