@@ -6,7 +6,7 @@ import java.util.Set;
 import com.movericks.costmanager.services.UserService;
 
 public class UserServiceImpl implements UserService {
-
+	
 	// Assume data services on Memory
 	private Set<String> nameMap;
 
@@ -15,13 +15,9 @@ public class UserServiceImpl implements UserService {
 		this.nameMap = new HashSet<String>();
 	}
 
-	private boolean isNotEmpty(String name) {
-		return name != null && !name.isEmpty();
-	}
-
 	@Override
 	public boolean isExists(String name) {
-		return this.isNotEmpty(name) && this.nameMap.contains(name);
+		return this.nameMap.contains(name);
 	}
 
 	@Override

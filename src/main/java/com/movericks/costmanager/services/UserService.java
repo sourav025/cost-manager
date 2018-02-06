@@ -10,7 +10,7 @@ public interface UserService {
 
 	/**
 	 * @param name
-	 * @return
+	 * @return boolean
 	 */
 	public boolean isExists(String name);
 
@@ -18,7 +18,7 @@ public interface UserService {
 	 * Register a new user
 	 * 
 	 * @param name
-	 * @return
+	 * @return boolean
 	 */
 	public boolean registerUser(String name);
 

@@ -15,7 +15,7 @@ public interface ValidationService {
 	 * Validation of Expense Transaction
 	 * 
 	 * @param payment
-	 * @return
+	 * @return boolean
 	 */
 	public boolean validatePayment(ExpenseEntity payment);
 
@@ -23,7 +23,7 @@ public interface ValidationService {
 	 * Validation of name
 	 * 
 	 * @param name
-	 * @return
+	 * @return boolean
 	 */
 	public boolean validateName(String name);
 
@@ -31,7 +31,7 @@ public interface ValidationService {
 	 * Expense Transaction validation using ExpenseEntity
 	 * 
 	 * @param expenseEntity
-	 * @return
+	 * @return boolean
 	 */
 	public boolean validateUserFromExpenseEntity(ExpenseEntity expenseEntity);
 }
