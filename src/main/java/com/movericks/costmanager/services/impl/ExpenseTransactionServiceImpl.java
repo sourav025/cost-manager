@@ -59,6 +59,7 @@ public class ExpenseTransactionServiceImpl implements ExpenseTransactionService 
 		splitedStrs = line.split(FOR_SPLIT_REGEX, 2);
 		String amountWithCurrency = splitedStrs[0];
 		String descriptions = splitedStrs[1];
+		amountWithCurrency.replaceAll("$", "");
 
 		ExpenseEntity expenseEntity = new ExpenseEntity();
 		expenseEntity.setName(name);

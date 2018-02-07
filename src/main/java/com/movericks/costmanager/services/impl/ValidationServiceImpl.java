@@ -17,9 +17,8 @@ public class ValidationServiceImpl implements ValidationService {
 
 	@Override
 	public boolean validateName(String name) {
-		if (name == null || name.isEmpty() || !Pattern.matches("^[\\p{L}\\s'.-]+$", name)) {
-			throw new RuntimeException(
-					"Transaction contains invalid user name.");
+		if (name == null || name.trim().isEmpty() || !Pattern.matches("^[\\p{L}\\s'.-]+$", name)) {
+			throw new RuntimeException(String.format("Invalid Name [%s] found.",name));
 		}
 		return true;
 	}
