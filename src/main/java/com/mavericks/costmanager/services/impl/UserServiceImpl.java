@@ -1,9 +1,9 @@
-package com.movericks.costmanager.services.impl;
+package com.mavericks.costmanager.services.impl;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.movericks.costmanager.services.UserService;
+import com.mavericks.costmanager.services.UserService;
 
 public class UserServiceImpl implements UserService {
 	

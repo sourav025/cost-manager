@@ -1,4 +1,4 @@
-package com.movericks.costmanager.utils;
+package com.mavericks.costmanager.utils;
 
 import java.io.BufferedReader;
 import java.io.File;

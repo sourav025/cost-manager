@@ -1,11 +1,11 @@
-package com.movericks.costmanager.utils;
+package com.mavericks.costmanager.utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.movericks.costmanager.entities.Settlement;
-import com.movericks.costmanager.entities.UserBalance;
+import com.mavericks.costmanager.entities.Settlement;
+import com.mavericks.costmanager.entities.UserBalance;
 
 /**
  * Purpose of this Utility class is to settle the balances between involved

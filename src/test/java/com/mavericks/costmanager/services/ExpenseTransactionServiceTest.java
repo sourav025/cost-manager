@@ -13,14 +13,14 @@ import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
-import com.movericks.costmanager.entities.ExpenseEntity;
-import com.movericks.costmanager.services.ExpenseTransactionService;
-import com.movericks.costmanager.services.UserBalanceService;
-import com.movericks.costmanager.services.UserService;
-import com.movericks.costmanager.services.impl.ExpenseTransactionServiceImpl;
-import com.movericks.costmanager.services.impl.UserBalanceServiceImpl;
-import com.movericks.costmanager.services.impl.UserServiceImpl;
-import com.movericks.costmanager.utils.CostManagerUtils;
+import com.mavericks.costmanager.entities.ExpenseEntity;
+import com.mavericks.costmanager.services.ExpenseTransactionService;
+import com.mavericks.costmanager.services.UserBalanceService;
+import com.mavericks.costmanager.services.UserService;
+import com.mavericks.costmanager.services.impl.ExpenseTransactionServiceImpl;
+import com.mavericks.costmanager.services.impl.UserBalanceServiceImpl;
+import com.mavericks.costmanager.services.impl.UserServiceImpl;
+import com.mavericks.costmanager.utils.CostManagerUtils;
 
 @RunWith(Theories.class)
 public class ExpenseTransactionServiceTest {

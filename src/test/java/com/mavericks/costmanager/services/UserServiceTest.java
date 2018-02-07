@@ -13,8 +13,8 @@ import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
-import com.movericks.costmanager.services.UserService;
-import com.movericks.costmanager.services.impl.UserServiceImpl;
+import com.mavericks.costmanager.services.UserService;
+import com.mavericks.costmanager.services.impl.UserServiceImpl;
 
 @RunWith(Theories.class)
 public class UserServiceTest {

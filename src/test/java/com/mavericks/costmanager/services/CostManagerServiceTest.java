@@ -5,9 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import com.movericks.costmanager.entities.ExpenseEntity;
-import com.movericks.costmanager.services.CostManagerService;
-import com.movericks.costmanager.services.impl.CostManagerServiceImpl;
+import com.mavericks.costmanager.entities.ExpenseEntity;
+import com.mavericks.costmanager.services.CostManagerService;
+import com.mavericks.costmanager.services.impl.CostManagerServiceImpl;
 
 public class CostManagerServiceTest {
 

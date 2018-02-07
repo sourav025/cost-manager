@@ -1,8 +1,8 @@
-package com.movericks.costmanager.services;
+package com.mavericks.costmanager.services;
 
 import java.util.List;
 
-import com.movericks.costmanager.entities.UserBalance;
+import com.mavericks.costmanager.entities.UserBalance;
 
 /**
  * UserBalanceService is responsible to manage current balance for all available

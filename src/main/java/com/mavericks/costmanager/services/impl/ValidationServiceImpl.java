@@ -1,11 +1,11 @@
-package com.movericks.costmanager.services.impl;
+package com.mavericks.costmanager.services.impl;
 
 import java.util.regex.Pattern;
 
-import com.movericks.costmanager.entities.ExpenseEntity;
-import com.movericks.costmanager.services.UserService;
-import com.movericks.costmanager.services.ValidationService;
-import com.movericks.costmanager.utils.CostManagerUtils;
+import com.mavericks.costmanager.entities.ExpenseEntity;
+import com.mavericks.costmanager.services.UserService;
+import com.mavericks.costmanager.services.ValidationService;
+import com.mavericks.costmanager.utils.CostManagerUtils;
 
 public class ValidationServiceImpl implements ValidationService {
 
