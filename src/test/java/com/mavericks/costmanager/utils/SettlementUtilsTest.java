@@ -11,8 +11,8 @@ import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 
-import com.movericks.costmanager.entities.UserBalance;
-import com.movericks.costmanager.utils.SettlementUtils;
+import com.mavericks.costmanager.entities.UserBalance;
+import com.mavericks.costmanager.utils.SettlementUtils;
 
 @RunWith(Theories.class)
 public class SettlementUtilsTest {

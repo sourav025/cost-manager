@@ -1,4 +1,4 @@
-package com.movericks.costmanager.entities;
+package com.mavericks.costmanager.entities;
 
 /**
  * All expense Transactions are expressed using ExpenseEntit

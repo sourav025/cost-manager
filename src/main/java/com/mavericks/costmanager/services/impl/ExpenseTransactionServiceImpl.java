@@ -1,14 +1,14 @@
-package com.movericks.costmanager.services.impl;
+package com.mavericks.costmanager.services.impl;
 
 import java.util.List;
 
-import com.movericks.costmanager.entities.ExpenseEntity;
-import com.movericks.costmanager.entities.Settlement;
-import com.movericks.costmanager.entities.UserBalance;
-import com.movericks.costmanager.services.ExpenseTransactionService;
-import com.movericks.costmanager.services.UserBalanceService;
-import com.movericks.costmanager.services.UserService;
-import com.movericks.costmanager.utils.SettlementUtils;
+import com.mavericks.costmanager.entities.ExpenseEntity;
+import com.mavericks.costmanager.entities.Settlement;
+import com.mavericks.costmanager.entities.UserBalance;
+import com.mavericks.costmanager.services.ExpenseTransactionService;
+import com.mavericks.costmanager.services.UserBalanceService;
+import com.mavericks.costmanager.services.UserService;
+import com.mavericks.costmanager.utils.SettlementUtils;
 
 public class ExpenseTransactionServiceImpl implements ExpenseTransactionService {
 

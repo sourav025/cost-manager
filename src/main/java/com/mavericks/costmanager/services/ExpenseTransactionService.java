@@ -1,9 +1,9 @@
-package com.movericks.costmanager.services;
+package com.mavericks.costmanager.services;
 
 import java.util.List;
 
-import com.movericks.costmanager.entities.ExpenseEntity;
-import com.movericks.costmanager.entities.Settlement;
+import com.mavericks.costmanager.entities.ExpenseEntity;
+import com.mavericks.costmanager.entities.Settlement;
 
 public interface ExpenseTransactionService {
 
