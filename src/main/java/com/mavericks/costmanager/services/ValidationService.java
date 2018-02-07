@@ -1,6 +1,6 @@
-package com.movericks.costmanager.services;
+package com.mavericks.costmanager.services;
 
-import com.movericks.costmanager.entities.ExpenseEntity;
+import com.mavericks.costmanager.entities.ExpenseEntity;
 
 /**
  * 

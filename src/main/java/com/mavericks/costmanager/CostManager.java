@@ -1,15 +1,15 @@
-package com.movericks.costmanager;
+package com.mavericks.costmanager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 
-import com.movericks.costmanager.entities.ExpenseAddResultEntity;
-import com.movericks.costmanager.entities.Settlement;
-import com.movericks.costmanager.entities.UserAddResultEntity;
-import com.movericks.costmanager.services.CostManagerService;
-import com.movericks.costmanager.services.impl.CostManagerServiceImpl;
+import com.mavericks.costmanager.entities.ExpenseAddResultEntity;
+import com.mavericks.costmanager.entities.Settlement;
+import com.mavericks.costmanager.entities.UserAddResultEntity;
+import com.mavericks.costmanager.services.CostManagerService;
+import com.mavericks.costmanager.services.impl.CostManagerServiceImpl;
 
 /**
  * CostManager Application starts initialization from here
@@ -47,7 +47,13 @@ public class CostManager {
 		costManager.addExpenses(expensesListsFile);
 
 		// showing all settlement status
-		costManager.getSettlementStatus().stream().forEach(System.out::println);
+		List<Settlement> settlements=costManager.getSettlementStatus();
+		if(settlements.size() == 0){
+			System.out.println("WOW !!! Already Settled.");
+		}
+		else {
+			settlements.forEach(System.out::println);
+		}
 	}
 
 	private File getFileFromSystem(String parameterName) throws FileNotFoundException {

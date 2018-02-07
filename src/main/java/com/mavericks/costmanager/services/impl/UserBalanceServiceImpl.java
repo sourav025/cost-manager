@@ -1,12 +1,12 @@
-package com.movericks.costmanager.services.impl;
+package com.mavericks.costmanager.services.impl;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.movericks.costmanager.entities.UserBalance;
-import com.movericks.costmanager.services.UserBalanceService;
+import com.mavericks.costmanager.entities.UserBalance;
+import com.mavericks.costmanager.services.UserBalanceService;
 
 public class UserBalanceServiceImpl implements UserBalanceService {
 

@@ -23,16 +23,20 @@ $PEOPLE_NAME$ paid $AMOUNT_WITH_CURRENCY_SIGN_AS_PREFIX$ for $PURPOSE_DESCRIPTIO
 ```
 git clone https://github.com/sourav025/cost-manager.git
 ```
-3. Go inside `cost-manager` directory
-4. Execute `mvn clean install` command
-5. Now there are 2 ways, application main function can be executed
-    1. Execute command. Please use absolute path for file.
+3. Go inside `cost-manager` directory using `cd cost-manager`
+4. Now there are two steps to execute application main function
+    1. Execute the command below to build `cost-manager`
+    ```bash
+    sudo chmod +x build.sh run.sh
+    sh build.sh
     ```
-    mvn -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$" exec:java
+    2. Run `cost-manager` using the below command
     ```
-    2. Goto `target` directory using `cd target` and execute 
+    sh run $NAMES_LIST_FILE_FULL_PATH EXPENSES_LIST_FULL_PATH$
     ```
-    java -Dnames="$NAMES_LIST_FILE_FULL_PATH$" -Dexpenses="$EXPENSES_LIST_FULL_PATH$ -jar cost-manager-1.0.0-SNAPSHOT.jar
-    ``` 
+    #### Example
+    ```bash
+    sh run /user/ubuntu/input/names.txt /user/ubuntu/input/expenses.txt
+    ```
 
-6. To execute unit tests goto `cost-manager` directory and execute `mvn surefire:test`
+5. To execute unit tests goto `cost-manager` directory and execute `mvn surefire:test`

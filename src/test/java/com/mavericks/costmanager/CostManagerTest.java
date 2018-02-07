@@ -10,10 +10,10 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.movericks.costmanager.CostManager;
-import com.movericks.costmanager.entities.ExpenseAddResultEntity;
-import com.movericks.costmanager.entities.Settlement;
-import com.movericks.costmanager.entities.UserAddResultEntity;
+import com.mavericks.costmanager.CostManager;
+import com.mavericks.costmanager.entities.ExpenseAddResultEntity;
+import com.mavericks.costmanager.entities.Settlement;
+import com.mavericks.costmanager.entities.UserAddResultEntity;
 
 /**
  * Unit test for simple App.

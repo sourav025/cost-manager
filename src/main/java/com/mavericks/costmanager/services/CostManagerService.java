@@ -1,13 +1,13 @@
-package com.movericks.costmanager.services;
+package com.mavericks.costmanager.services;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import com.movericks.costmanager.entities.ExpenseAddResultEntity;
-import com.movericks.costmanager.entities.ExpenseEntity;
-import com.movericks.costmanager.entities.Settlement;
-import com.movericks.costmanager.entities.UserAddResultEntity;
+import com.mavericks.costmanager.entities.ExpenseAddResultEntity;
+import com.mavericks.costmanager.entities.ExpenseEntity;
+import com.mavericks.costmanager.entities.Settlement;
+import com.mavericks.costmanager.entities.UserAddResultEntity;
 
 /**
  * 

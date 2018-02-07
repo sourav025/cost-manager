@@ -1,4 +1,4 @@
-package com.movericks.costmanager.services;
+package com.mavericks.costmanager.services;
 
 /**
  * Processes All the user operations

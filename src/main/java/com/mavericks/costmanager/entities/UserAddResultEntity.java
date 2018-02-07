@@ -1,4 +1,4 @@
-package com.movericks.costmanager.entities;
+package com.mavericks.costmanager.entities;
 
 import java.util.List;
 
